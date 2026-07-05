@@ -1,0 +1,58 @@
+playlist = []
+def return_menu():
+    conditionals_0 = ["yes", "yess", "yea", "yeah", "absolutely", "sure", "yup", "of course"]
+    conditionals_1 = ["no", "nope", "nono", "noo", "absolutely not", "nah", "nahh"]
+    choice_5 = input("\nWant to return to menu?  ")
+    if choice_5 in conditionals_0:
+       menu()
+    elif choice_5 in conditionals_1:
+       print("Quitting...")
+       exit()
+def menu():
+    print("Main menu:")
+    print("\nPress - 1 To add a song")
+    print("Press - 2 To search a song")
+    print("Press - 3 To see full playlist")
+    print("Press - 4 To Remove a song")
+    print("Press - 5 To exit completely")
+    choice_1 = int(input("\nSelect option: "))
+    if choice_1 == 1:
+        add_song()
+    elif choice_1 == 2:
+        search_song()
+    elif choice_1 == 3:
+        see_playlist()
+    elif choice_1 == 4:
+        remove_song()
+    elif choice_1 == 5:
+        print("\nQuitting...")
+        exit()
+    elif choice_1 != 1 or 2 or 3 or 4 or 5:
+        print("\nInvalid option")
+    return_menu()
+def add_song():
+    choice_2 = input("\nName of the song: ")
+    playlist.append(choice_2)
+    print("\nSong added successfully")
+    return_menu()
+def search_song():
+    choice_3 = input("\nWhich song are you looking for: ")
+    if choice_3 in playlist:
+        print(f"\n{choice_3} Found it!")
+    else:
+        print("\nSong typed not found. Add to playlist first.")
+    return_menu()
+def see_playlist():
+    print("\nFull playlist: \n")
+    for elem in playlist:
+        print(elem)
+    return_menu()
+def remove_song():
+    choice_4 = input("\nWhich song you would like to remove: ")
+    if choice_4 in playlist:
+        playlist.remove(choice_4)
+        print("\nSong removed successfully")
+    else:
+        print(f"{choice_4} does not exist in your playlist.")
+    return_menu()
+menu()

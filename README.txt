@@ -8,7 +8,6 @@ Features:
 -Searching song in the whole playlist by their name
 -Removing songs
 -Showing the whole playlist
--Functions
 
 Technologies:
 

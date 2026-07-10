@@ -1,13 +1,15 @@
 Project Name: My-Playlist
 
-This is a project called: My-Playlist. I built this project because i wanted to create something different with many functions doing their own work rather than just a game. 
+This is a Python project called: My-Playlist.
+
+I built this project because I wanted to create something different from a game and practice using multiple functions, each with its own responsibility.
 
 Features:
 
--Adding songs
--Searching song in the whole playlist by their name
--Removing songs
--Showing the whole playlist
+-Add songs
+-Search for songs by title
+-Remove songs
+-Display the entire playlist
 
 Technologies:
 

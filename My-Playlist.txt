@@ -29,15 +29,15 @@ def menu():
         exit()
     elif choice_1 != 1 or 2 or 3 or 4 or 5:
         print("\nInvalid option")
-    return_menu()
+        return_menu()
 def add_song():
-    choice_2 = input("\nName of the song: ")
+    choice_2 = input("\nName of the song: ").strip().capitalize()
     playlist.append(choice_2)
     print("\nSong added successfully")
     return_menu()
 def search_song():
-    choice_3 = input("\nWhich song are you looking for: ")
-    if choice_3 in playlist:
+    choice_3 = input("\nWhich song are you looking for: ").capitalize().strip()
+    if choice_3 == playlist:
         print(f"\n{choice_3} Found it!")
     else:
         print("\nSong typed not found. Add to playlist first.")
@@ -48,8 +48,8 @@ def see_playlist():
         print(elem)
     return_menu()
 def remove_song():
-    choice_4 = input("\nWhich song you would like to remove: ")
-    if choice_4 in playlist:
+    choice_4 = input("\nWhich song you would like to remove: ").capitalize().strip()
+    if choice_4 == playlist:
         playlist.remove(choice_4)
         print("\nSong removed successfully")
     else:
